@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcogenX Innovations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #f0f0f0;
+    }
+    .navbar {
+      background-color: #010409;
+    }
+    .navbar a, .navbar-brand {
+      color: #58a6ff !important;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581091012184-7d962d7fc90c') no-repeat center center;
+      background-size: cover;
+      padding: 120px 20px;
+      text-align: center;
+    }
+    .hero h1, .hero p {
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    .section-dark {
+      background-color: #161b22;
+    }
+    .section-light {
+      background-color: #0d1117;
+    }
+    .icon-box {
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      background-color: #21262d;
+      transition: transform 0.3s ease;
+    }
+    .icon-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #010409;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+    a.btn-custom {
+      background-color: #238636;
+      color: white;
+      border: none;
+    }
+    a.btn-custom-outline {
+      border: 1px solid #58a6ff;
+      color: #58a6ff;
+    }
+    .testimonial-card {
+      background-color: #21262d;
+      border-radius: 10px;
+      padding: 25px;
+      margin: 15px 0;
+    }
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .partner-logo {
+      height: 60px;
+      margin: 20px;
+      filter: grayscale(100%) brightness(2);
+      transition: filter 0.3s ease;
+    }
+    .partner-logo:hover {
+      filter: grayscale(0%) brightness(1);
+    }
+    .process-step {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: 40px;
+    }
+    .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      background-color: #238636;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">EcogenX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link" href="impact.html">Impact</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero text-white">
+    <h1>Transforming Waste, Empowering Communities, Energizing the Future</h1>
+    <p class="lead">Smart Waste Management & Sustainable Solutions for a Cleaner India</p>
+    <a href="about.html" class="btn btn-custom m-2">Who We Are</a>
+    <a href="contact.html" class="btn btn-custom-outline m-2">Get Started</a>
+  </div>
+
+  <!-- About Short -->
+  <div class="section section-dark container text-center">
+    <h2>Welcome to EcogenX Innovations</h2>
+    <p class="mt-3">We are a Hyderabad-based tech-driven waste management startup blending AI, sustainability, and community empowerment. Join our journey to build zero-waste cities through smart bins, waste-to-energy tech, and reward systems.</p>
+  </div>
+
+  <!-- How It Works Section -->
+  <div class="section section-light">
+    <div class="container">
+      <h2 class="text-center mb-5">How Our System Works</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Smart Waste Collection</h3>
+            <p>Our AI-powered smart bins automatically sort and compact waste while monitoring fill levels in real-time. When full, they alert our collection teams for timely pickup.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Automated Sorting</h3>
+            <p>At our processing centers, advanced robotics and computer vision systems separate materials with 95% accuracy, maximizing recyclable recovery.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Waste-to-Energy Conversion</h3>
+            <p>Non-recyclable waste is converted to clean energy through our proprietary gasification process, powering local communities.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Rewards & Analytics</h3>
+            <p>Users earn EcogenX tokens for proper waste disposal, redeemable for benefits. Municipalities access real-time waste analytics through our dashboard.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="solutions.html" class="btn btn-custom">Explore Our Technology</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Us Section -->
+  <div class="section section-dark">
+    <div class="container">
+      <h2 class="text-center mb-5">Why Choose EcogenX?</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="icon-box">
+            <i class="fas fa-brain fa-3x mb-3" style="color: #58a6ff;"></i>
+            <h3>AI-Driven Efficiency</h3>
+            <p>Our machine learning algorithms optimize collection routes and processing, reducing costs by up to 40% compared to traditional methods.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-box">
+            <i class="fas fa-leaf fa-3x mb-3" style="color: #238636;"></i>
+            <h3>Sustainable Impact</h3>
+            <p>Each ton processed prevents 1.5 tons of CO2 emissions. Our closed-loop systems recover 85% of materials for reuse.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-box">
+            <i class="fas fa-hand-holding-heart fa-3x mb-3" style="color: #db61a2;"></i>
+            <h3>Community Focus</h3>
+            <p>We create green jobs and educate citizens through our Waste Warrior program, building environmental awareness.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="icon-box">
+            <i class="fas fa-bolt fa-3x mb-3" style="color: #f0b72f;"></i>
+            <h3>Energy Recovery</h3>
+            <p>Our waste-to-energy systems generate 1MW per 10 tons processed, enough to power 800 homes daily.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-box">
+            <i class="fas fa-chart-line fa-3x mb-3" style="color: #58a6ff;"></i>
+            <h3>Data Insights</h3>
+            <p>Real-time analytics help cities make informed decisions about waste management policies and infrastructure.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-box">
+            <i class="fas fa-shield-alt fa-3x mb-3" style="color: #238636;"></i>
+            <h3>Proven Results</h3>
+            <p>Implemented in 3 cities, we've diverted 12,000+ tons from landfills and generated 5MW of clean energy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="section section-light">
+    <div class="container">
+      <h2 class="text-center mb-5">What Our Partners Say</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Testimonial" class="testimonial-img">
+            <h4>Priya Sharma</h4>
+            <p class="text-muted">Municipal Commissioner, Hyderabad</p>
+            <p>"EcogenX's smart bins reduced our collection costs by 35% while improving neighborhood cleanliness. Their data dashboard transformed our waste management strategy."</p>
+            <div class="rating">
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Testimonial" class="testimonial-img">
+            <h4>Raj Patel</h4>
+            <p class="text-muted">CEO, GreenTech Solutions</p>
+            <p>"Collaborating with EcogenX on their sorting robotics gave us breakthrough innovations we've applied across our recycling facilities. Their engineering team is exceptional."</p>
+            <div class="rating">
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+              <i class="fas fa-star-half-alt" style="color: #f0b72f;"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Testimonial" class="testimonial-img">
+            <h4>Ananya Reddy</h4>
+            <p class="text-muted">Resident & EcogenX User</p>
+            <p>"I've earned over 5,000 EcogenX tokens this year just by properly sorting my waste. Redeemed them for grocery vouchers and even paid part of my electricity bill!"</p>
+            <div class="rating">
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+              <i class="fas fa-star" style="color: #f0b72f;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Collaborations Section -->
+  <div class="section section-dark">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Strategic Collaborations</h2>
+      <p class="text-center mb-5">Building a sustainable future requires partnership. We work with leading organizations across sectors to amplify our impact.</p>
+      
+      <div class="text-center mb-5">
+        <h3 class="mb-4">Technology Partners</h3>
+        <div class="d-flex flex-wrap justify-content-center">
+          <img src="https://via.placeholder.com/150x60?text=IBM" alt="IBM" class="partner-logo">
+          <img src="https://via.placeholder.com/150x60?text=Siemens" alt="Siemens" class="partner-logo">
+          <img src="https://via.placeholder.com/150x60?text=Tata" alt="Tata" class="partner-logo">
+          <img src="https://via.placeholder.com/150x60?text=Wipro" alt="Wipro" class="partner-logo">
+        </div>
+      </div>
+      
+      <div class="text-center mb-5">
+        <h3 class="mb-4">Municipal Partnerships</h3>
+        <div class="d-flex flex-wrap justify-content-center">
+          <img src="https://via.placeholder.com/150x60?text=GHMC" alt="GHMC" class="partner-logo">
+          <img src="https://via.placeholder.com/150x60?text=BBMP" alt="BBMP" class="partner-logo">
+          <img src="https://via.placeholder.com/150x60?text=PMC" alt="PMC" class="partner-logo">
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <h3 class="mb-4">Academic & Research</h3>
+        <div class="d-flex flex-wrap justify-content-center">
+          <img src="https://via.placeholder.com/150x60?text=IIT" alt="IIT" class="partner-logo">
+          <img src="https://via.placeholder.com/150x60?text=IIM" alt="IIM" class="partner-logo">
+          <img src="https://via.placeholder.com/150x60?text=TERI" alt="TERI" class="partner-logo">
+        </div>
+      </div>
+      
+      <div class="text-center mt-5">
+        <p>Interested in partnering with us?</p>
+        <a href="contact.html" class="btn btn-custom-outline">Contact Our Partnerships Team</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="section text-center" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40') no-repeat center center; background-size: cover;">
+    <div class="container py-5">
+      <h2 class="text-white mb-4">Ready to Transform Your Waste Management?</h2>
+      <p class="lead text-white mb-4">Join the movement towards smarter, sustainable cities.</p>
+      <a href="contact.html" class="btn btn-custom btn-lg m-2">Request Demo</a>
+      <a href="tel:+919876543210" class="btn btn-custom-outline btn-lg m-2">Call Us Now</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5>EcogenX Innovations</h5>
+          <p>Hyderabad, Telangana<br>India - 500032</p>
+          <p><i class="fas fa-phone me-2"></i> +91 98765 43210</p>
+          <p><i class="fas fa-envelope me-2"></i> hello@ecogenx.go</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="text-light">About Us</a></li>
+            <li><a href="solutions.html" class="text-light">Our Solutions</a></li>
+            <li><a href="impact.html" class="text-light">Impact Report</a></li>
+            <li><a href="careers.html" class="text-light">Careers</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Follow Us</h5>
+          <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#" class="text-light me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#" class="text-light"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+      </div>
+      <hr>
+      <p>© 2025 EcogenX Innovations Pvt Ltd. All rights reserved. | <a href="privacy.html" class="text-light">Privacy Policy</a> | <a href="terms.html" class="text-light">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

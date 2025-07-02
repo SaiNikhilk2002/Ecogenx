@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #0a192f;  /* Dark blue */
+            --secondary-color: #172a45;  /* Slightly lighter blue */
+            --accent-color: #64ffda;  /* Teal accent */
+            --text-color: #ccd6f6;  /* Light text */
+            --dark-color: #020c1b;  /* Very dark blue */
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .thank-you-container {
+            background-color: rgba(23, 42, 69, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            overflow: hidden;
+        }
+        
+        .handshake-img {
+            max-width: 300px;
+            filter: drop-shadow(0 0 10px rgba(100, 255, 218, 0.5));
+            transition: all 0.5s ease;
+        }
+        
+        .handshake-img:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 15px rgba(100, 255, 218, 0.8));
+        }
+        
+        .thank-you-title {
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+            position: relative;
+        }
+        
+        .thank-you-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--accent-color);
+            border-radius: 3px;
+        }
+        
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            border: 2px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        
+        .icon-box:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: rotate(15deg) scale(1.1);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+        
+        .btn-custom {
+            background-color: transparent;
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            padding: 10px 25px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-custom:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+            color: var(--accent-color);
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+            transform: translateY(-3px);
+        }
+        
+        .btn-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn-custom:hover::before {
+            left: 100%;
+        }
+        
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle var(--duration) infinite ease-in-out;
+            opacity: 0;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Stars Background -->
+    <div class="stars" id="stars"></div>
+    
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="thank-you-container p-4 p-md-5 animate__animated animate__fadeIn">
+                    <div class="text-center mb-5">
+                        <div class="icon-box animate__animated animate__bounceIn">
+                            <i class="feature-icon fas fa-handshake"></i>
+                        </div>
+                        <h1 class="thank-you-title display-4 fw-bold mb-4 animate__animated animate__fadeInDown">Thank You!</h1>
+                        <img src="https://cdn-icons-png.flaticon.com/512/3095/3095583.png" alt="Handshake" class="handshake-img img-fluid my-4 floating">
+                        <p class="lead animate__animated animate__fadeIn animate__delay-1s">We sincerely appreciate your time and trust in us. Your submission has been received and we'll get back to you soon.</p>
+                    </div>
+                    
+                    <div class="row text-center mt-5">
+                        <div class="col-md-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                            <div class="icon-box">
+                                <i class="feature-icon fas fa-clock"></i>
+                            </div>
+                            <h4 class="mb-3">Quick Response</h4>
+                            <p>Our team will review your request and get back to you within 24 hours.</p>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4 animate__animated animate__fadeInUp animate__delay-2s">
+                            <div class="icon-box">
+                                <i class="feature-icon fas fa-headset"></i>
+                            </div>
+                            <h4 class="mb-3">24/7 Support</h4>
+                            <p>We're always here to help you with any questions or concerns you may have.</p>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4 animate__animated animate__fadeInUp animate__delay-3s">
+                            <div class="icon-box">
+                                <i class="feature-icon fas fa-heart"></i>
+                            </div>
+                            <h4 class="mb-3">Customer Love</h4>
+                            <p>Your satisfaction is our top priority. We value your feedback.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-5 animate__animated animate__fadeIn animate__delay-3s">
+                        <p class="mb-4">Follow us on social media for updates and news</p>
+                        <div class="d-flex justify-content-center gap-3 mb-4">
+                            <a href="#" class="btn btn-custom btn-sm"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="btn btn-custom btn-sm"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="btn btn-custom btn-sm"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="btn btn-custom btn-sm"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="/" class="btn btn-custom pulse">Return to Homepage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Create stars for background
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 100;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Random size between 1px and 3px
+                const size = Math.random() * 2 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                // Random position
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                
+                // Random animation duration between 2s and 5s
+                const duration = `${Math.random() * 3 + 2}s`;
+                star.style.setProperty('--duration', duration);
+                
+                // Random delay
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // Initialize when page loads
+        window.addEventListener('load', createStars);
+        
+        // Add scroll animation to elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate__animated');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const animation = entry.target.getAttribute('data-animate');
+                        entry.target.classList.add(animation);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
