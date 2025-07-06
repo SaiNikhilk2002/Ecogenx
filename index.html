@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,34 +13,52 @@
       background-color: #0d1117;
       color: #f0f0f0;
     }
+
     .navbar {
       background-color: #010409;
     }
-    .navbar a, .navbar-brand {
+
+    .navbar a,
+    .navbar-brand {
       color: #58a6ff !important;
     }
+
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581091012184-7d962d7fc90c') no-repeat center center;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581091012184-7d962d7fc90c') no-repeat center center;
       background-size: cover;
       padding: 120px 20px;
       text-align: center;
     }
-    .hero h1, .hero p {
+
+    .hero h1,
+    .hero p {
       animation: fadeIn 1.5s ease-in;
     }
+
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     .section {
       padding: 60px 20px;
     }
+
     .section-dark {
       background-color: #161b22;
     }
+
     .section-light {
       background-color: #0d1117;
     }
+
     .icon-box {
       border: 1px solid #30363d;
       border-radius: 10px;
@@ -49,31 +68,37 @@
       background-color: #21262d;
       transition: transform 0.3s ease;
     }
+
     .icon-box:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
+
     footer {
       background: #010409;
       color: white;
       text-align: center;
       padding: 30px 10px;
     }
+
     a.btn-custom {
       background-color: #238636;
       color: white;
       border: none;
     }
+
     a.btn-custom-outline {
       border: 1px solid #58a6ff;
       color: #58a6ff;
     }
+
     .testimonial-card {
       background-color: #21262d;
       border-radius: 10px;
       padding: 25px;
       margin: 15px 0;
     }
+
     .testimonial-img {
       width: 80px;
       height: 80px;
@@ -81,20 +106,24 @@
       object-fit: cover;
       margin-bottom: 15px;
     }
+
     .partner-logo {
       height: 60px;
       margin: 20px;
       filter: grayscale(100%) brightness(2);
       transition: filter 0.3s ease;
     }
+
     .partner-logo:hover {
       filter: grayscale(0%) brightness(1);
     }
+
     .process-step {
       position: relative;
       padding-left: 80px;
       margin-bottom: 40px;
     }
+
     .step-number {
       position: absolute;
       left: 0;
@@ -109,13 +138,48 @@
       font-size: 24px;
       font-weight: bold;
     }
+
+
+
+    .how-it-works-card {
+      background-color: #00000a;
+      color: #ffffff;
+      border: 1px solid #343a3f;
+      border-radius: 1rem;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .how-it-works-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .how-it-works-card .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #4abcf4;
+    }
+
+    .how-it-works-card .card-text {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
   </style>
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#">EcogenX</a>
+      <a class="navbar-brand" href="#">
+        <img src="images/Ecogen_X_PNG_Logo.png" alt="EcogenX Logo" style="width: 220px;">
+      </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -140,98 +204,176 @@
   </div>
 
   <!-- About Short -->
-  <div class="section section-dark container text-center">
-    <h2>Welcome to EcogenX Innovations</h2>
-    <p class="mt-3">We are a Hyderabad-based tech-driven waste management startup blending AI, sustainability, and community empowerment. Join our journey to build zero-waste cities through smart bins, waste-to-energy tech, and reward systems.</p>
-  </div>
-
-  <!-- How It Works Section -->
-  <div class="section section-light">
-    <div class="container">
-      <h2 class="text-center mb-5">How Our System Works</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="process-step">
-            <div class="step-number">1</div>
-            <h3>Smart Waste Collection</h3>
-            <p>Our AI-powered smart bins automatically sort and compact waste while monitoring fill levels in real-time. When full, they alert our collection teams for timely pickup.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">2</div>
-            <h3>Automated Sorting</h3>
-            <p>At our processing centers, advanced robotics and computer vision systems separate materials with 95% accuracy, maximizing recyclable recovery.</p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="process-step">
-            <div class="step-number">3</div>
-            <h3>Waste-to-Energy Conversion</h3>
-            <p>Non-recyclable waste is converted to clean energy through our proprietary gasification process, powering local communities.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">4</div>
-            <h3>Rewards & Analytics</h3>
-            <p>Users earn EcogenX tokens for proper waste disposal, redeemable for benefits. Municipalities access real-time waste analytics through our dashboard.</p>
-          </div>
-        </div>
+  <div class="section section-dark container py-5">
+    <div class="row align-items-center">
+      <!-- Left Column: Image -->
+      <div class="col-md-6 mb-4 mb-md-0 text-center">
+        <img src="./images/eco-illustration.png" alt="EcogenX Illustration" class="img-fluid"
+          style="max-width: 100%; height: auto;">
       </div>
-      <div class="text-center mt-4">
-        <a href="solutions.html" class="btn btn-custom">Explore Our Technology</a>
+
+      <!-- Right Column: Text -->
+      <div class="col-md-6 text-md-start text-center">
+        <h2>Welcome to EcogenX Innovations</h2>
+        <p class="mt-3">
+          We are a Hyderabad-based waste management and sustainability startup making waste disposal
+          simple, rewarding, and responsible. Through doorstep collections, smart recycling bins, and awareness
+          programs,
+          we help households, schools, and businesses turn waste
+          into resources — building cleaner communities and a greener India.
+        </p>
       </div>
     </div>
   </div>
+
+
+  <!-- How It Works Section -->
+  <!-- How It Works Section -->
+  <div class="section section-dark py-5" style="background: #000000;">
+    <div class="container">
+      <h2 class="text-center text-white mb-5">Together, We Can Make a Difference</h2>
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card how-it-works-card h-100 text-center">
+            <div class="card-body">
+              <img src="images/clean-street.png" alt="Keep Clean" style="width: 60px; height: 60px;" class="mb-3">
+              <h5 class="card-title">Keep Our Streets Clean</h5>
+              <p class="card-text">
+                By providing visible waste disposal points — from homes to public areas like tea stalls, pan shops,
+                schools, and offices.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card how-it-works-card h-100 text-center">
+            <div class="card-body">
+              <img src="images/empower-community.png" alt="Empower Communities" style="width: 60px; height: 60px;"
+                class="mb-3">
+              <h5 class="card-title">Empower Local Communities</h5>
+              <p class="card-text">
+                By creating jobs for women, students, and local youth through our waste collection and awareness
+                programs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card how-it-works-card h-100 text-center">
+            <div class="card-body">
+              <img src="images/responsible-habits.png" alt="Responsible Habits" style="width: 60px; height: 60px;"
+                class="mb-3">
+              <h5 class="card-title">Build Responsible Habits</h5>
+              <p class="card-text">
+                By making waste disposal easy, rewarding, and part of daily life for every Indian.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card how-it-works-card h-100 text-center">
+            <div class="card-body">
+              <img src="images/convert-waste.png" alt="Convert Waste" style="width: 60px; height: 60px;" class="mb-3">
+              <h5 class="card-title">Turn Waste into Resources</h5>
+              <p class="card-text">
+                By collecting, recycling, and converting waste into new products or clean energy — reducing pollution
+                and landfill burden.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="solutions.html" class="btn btn-outline-light px-4 py-2 rounded-pill">Explore Our Technology</a>
+      </div>
+    </div>
+  </div>
+
+
 
   <!-- Why Us Section -->
   <div class="section section-dark">
     <div class="container">
       <h2 class="text-center mb-5">Why Choose EcogenX?</h2>
       <div class="row">
-        <div class="col-md-4">
+
+
+        <div class="col-md-6">
           <div class="icon-box">
-            <i class="fas fa-brain fa-3x mb-3" style="color: #58a6ff;"></i>
-            <h3>AI-Driven Efficiency</h3>
-            <p>Our machine learning algorithms optimize collection routes and processing, reducing costs by up to 40% compared to traditional methods.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="icon-box">
-            <i class="fas fa-leaf fa-3x mb-3" style="color: #238636;"></i>
+            <img src="./images/bubble_SustainablImpact.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="Sustainable Impact Icon">
             <h3>Sustainable Impact</h3>
-            <p>Each ton processed prevents 1.5 tons of CO2 emissions. Our closed-loop systems recover 85% of materials for reuse.</p>
+            <p>Each ton processed prevents 1.5 tons of CO2 emissions. Our closed-loop systems recover 85% of materials
+              for reuse.</p>
           </div>
         </div>
-        <div class="col-md-4">
+
+        <div class="col-md-6">
           <div class="icon-box">
-            <i class="fas fa-hand-holding-heart fa-3x mb-3" style="color: #db61a2;"></i>
+            <img src="./images/bubble_Community_Focus.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="Community Focus Icon">
             <h3>Community Focus</h3>
-            <p>We create green jobs and educate citizens through our Waste Warrior program, building environmental awareness.</p>
+            <p>We create green jobs and educate citizens through our Waste Warrior program, building environmental
+              awareness.</p>
           </div>
         </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md-4">
+
+        <!-- <div class="col-md-4">
           <div class="icon-box">
-            <i class="fas fa-bolt fa-3x mb-3" style="color: #f0b72f;"></i>
+            <img src="./images/bubble_AI_Driven.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="AI Icon">
+            <h3>AI-Driven Efficiency</h3>
+            <p>Our machine learning algorithms optimize collection routes and processing, reducing costs by up to 40%
+              compared to traditional methods.</p>
+          </div>
+        </div> -->
+
+      </div>
+
+
+
+
+      <div class="row mt-4">
+        <!-- <div class="col-md-4">
+          <div class="icon-box">
+            <img src="./images/bubble_Energy_Recovery.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="Energy Recovery Icon">
             <h3>Energy Recovery</h3>
             <p>Our waste-to-energy systems generate 1MW per 10 tons processed, enough to power 800 homes daily.</p>
           </div>
-        </div>
-        <div class="col-md-4">
+        </div> -->
+
+        <div class="col-md-6">
           <div class="icon-box">
-            <i class="fas fa-chart-line fa-3x mb-3" style="color: #58a6ff;"></i>
+            <img src="./images/bubble_Data_Insight.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="Data Insights Icon">
             <h3>Data Insights</h3>
-            <p>Real-time analytics help cities make informed decisions about waste management policies and infrastructure.</p>
+            <p>Real-time analytics help cities make informed decisions about waste management policies and
+              infrastructure.</p>
           </div>
         </div>
-        <div class="col-md-4">
+
+        <div class="col-md-6">
           <div class="icon-box">
-            <i class="fas fa-shield-alt fa-3x mb-3" style="color: #238636;"></i>
+            <img src="./images/bubble_Proven_Result.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="Proven Results Icon">
             <h3>Proven Results</h3>
-            <p>Implemented in 3 cities, we've diverted 12,000+ tons from landfills and generated 5MW of clean energy.</p>
+            <p>Implemented in 3 cities, we've diverted 12,000+ tons from landfills and generated 5MW of clean energy.
+            </p>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 
   <!-- Testimonials Section -->
@@ -242,9 +384,10 @@
         <div class="col-md-4">
           <div class="testimonial-card">
             <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Testimonial" class="testimonial-img">
-            <h4>Priya Sharma</h4>
-            <p class="text-muted">Municipal Commissioner, Hyderabad</p>
-            <p>"EcogenX's smart bins reduced our collection costs by 35% while improving neighborhood cleanliness. Their data dashboard transformed our waste management strategy."</p>
+            <h4>Vishwas</h4>
+            <p class="text-light">Resident & EcogenX User</p>
+            <p>"I never thought recycling could be this easy. With EcogenX bags and
+              doorstep collection, managing waste at home is simple — plus, the reward points are a great bonus!"</p>
             <div class="rating">
               <i class="fas fa-star" style="color: #f0b72f;"></i>
               <i class="fas fa-star" style="color: #f0b72f;"></i>
@@ -258,8 +401,9 @@
           <div class="testimonial-card">
             <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Testimonial" class="testimonial-img">
             <h4>Raj Patel</h4>
-            <p class="text-muted">CEO, GreenTech Solutions</p>
-            <p>"Collaborating with EcogenX on their sorting robotics gave us breakthrough innovations we've applied across our recycling facilities. Their engineering team is exceptional."</p>
+            <p class="text-light">School Principal, Hyderabad</p>
+            <p>"Our students have learned the importance of waste segregation thanks to EcogenX.
+              The bins on our campus have made it easy to keep the school clean and teach responsibility."</p>
             <div class="rating">
               <i class="fas fa-star" style="color: #f0b72f;"></i>
               <i class="fas fa-star" style="color: #f0b72f;"></i>
@@ -273,8 +417,11 @@
           <div class="testimonial-card">
             <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Testimonial" class="testimonial-img">
             <h4>Ananya Reddy</h4>
-            <p class="text-muted">Resident & EcogenX User</p>
-            <p>"I've earned over 5,000 EcogenX tokens this year just by properly sorting my waste. Redeemed them for grocery vouchers and even paid part of my electricity bill!"</p>
+            <p class="text-light">Shop Owner, Tea Stall, Hyderabad
+            </p>
+            <p>"Earlier, cigarette waste and plastic wrappers littered the area.
+              After EcogenX installed the disposal bins, it’s much cleaner — and customers appreciate the effort too."
+            </p>
             <div class="rating">
               <i class="fas fa-star" style="color: #f0b72f;"></i>
               <i class="fas fa-star" style="color: #f0b72f;"></i>
@@ -289,11 +436,12 @@
   </div>
 
   <!-- Collaborations Section -->
-  <div class="section section-dark">
+  <!-- <div class="section section-dark">
     <div class="container">
       <h2 class="text-center mb-5">Our Strategic Collaborations</h2>
-      <p class="text-center mb-5">Building a sustainable future requires partnership. We work with leading organizations across sectors to amplify our impact.</p>
-      
+      <p class="text-center mb-5">Building a sustainable future requires partnership. We work with leading organizations
+        across sectors to amplify our impact.</p>
+
       <div class="text-center mb-5">
         <h3 class="mb-4">Technology Partners</h3>
         <div class="d-flex flex-wrap justify-content-center">
@@ -303,7 +451,7 @@
           <img src="https://via.placeholder.com/150x60?text=Wipro" alt="Wipro" class="partner-logo">
         </div>
       </div>
-      
+
       <div class="text-center mb-5">
         <h3 class="mb-4">Municipal Partnerships</h3>
         <div class="d-flex flex-wrap justify-content-center">
@@ -312,7 +460,7 @@
           <img src="https://via.placeholder.com/150x60?text=PMC" alt="PMC" class="partner-logo">
         </div>
       </div>
-      
+
       <div class="text-center">
         <h3 class="mb-4">Academic & Research</h3>
         <div class="d-flex flex-wrap justify-content-center">
@@ -321,23 +469,29 @@
           <img src="https://via.placeholder.com/150x60?text=TERI" alt="TERI" class="partner-logo">
         </div>
       </div>
-      
+
       <div class="text-center mt-5">
         <p>Interested in partnering with us?</p>
         <a href="contact.html" class="btn btn-custom-outline">Contact Our Partnerships Team</a>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Call to Action -->
-  <div class="section text-center" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40') no-repeat center center; background-size: cover;">
+  <div class="section text-center"
+    style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40') no-repeat center center; background-size: cover;">
     <div class="container py-5">
       <h2 class="text-white mb-4">Ready to Transform Your Waste Management?</h2>
       <p class="lead text-white mb-4">Join the movement towards smarter, sustainable cities.</p>
+
       <a href="contact.html" class="btn btn-custom btn-lg m-2">Request Demo</a>
-      <a href="tel:+919876543210" class="btn btn-custom-outline btn-lg m-2">Call Us Now</a>
+      <a href="tel:+917995423188" class="btn btn-custom-outline btn-lg m-2">Call Us Now</a>
+      <a href="https://wa.me/7995423188" target="_blank" class="btn btn-success btn-lg m-2">
+        <i class="fab fa-whatsapp me-2"></i>Chat with Us
+      </a>
     </div>
   </div>
+
 
   <!-- Footer -->
   <footer>
@@ -345,7 +499,7 @@
       <div class="row">
         <div class="col-md-4 mb-4">
           <h5>EcogenX Innovations</h5>
-          <p>Hyderabad, Telangana<br>India - 500032</p>
+          <p>302,16-2-701/1, MJR Classic,Malakpet,Near New Market Metro Station, Opposite to Essar Gas Pump <br>Hyderabad, Telangana, India - 500032</p>
           <p><i class="fas fa-phone me-2"></i> +91 98765 43210</p>
           <p><i class="fas fa-envelope me-2"></i> hello@ecogenx.go</p>
         </div>
@@ -360,17 +514,19 @@
         </div>
         <div class="col-md-4 mb-4">
           <h5>Follow Us</h5>
-          <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="#" class="text-light me-3"><i class="fab fa-linkedin fa-2x"></i></a>
-          <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="#" class="text-light"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#" target="_blank"  class="text-light me-3"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.linkedin.com/company/www.ecogenx.co/posts/?feedView=all" target="_blank"  class="text-light me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="#" target="_blank"  class="text-light me-3"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.instagram.com/ecogenx.in?igsh=OGsydHZxeXN2NTZu" target="_blank" class="text-light"><i class="fab fa-instagram fa-2x"></i></a>
         </div>
       </div>
       <hr>
-      <p>© 2025 EcogenX Innovations Pvt Ltd. All rights reserved. | <a href="privacy.html" class="text-light">Privacy Policy</a> | <a href="terms.html" class="text-light">Terms of Service</a></p>
+      <p>© 2025 EcogenX Innovations Pvt Ltd. All rights reserved. | <a href="privacy.html" class="text-light">Privacy
+          Policy</a> | <a href="terms.html" class="text-light">Terms of Service</a></p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

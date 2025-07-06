@@ -9,81 +9,219 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    :root {
+      --primary: #58a6ff;
+      --dark-bg: #0d1117;
+      --darker-bg: #010409;
+      --section-dark: #161b22;
+      --card-bg: #21262d;
+      --card-border: #30363d;
+      --text-light: #f0f0f0;
+      --text-muted: #c9d1d9;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d1117;
-      color: #f0f0f0;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--text-light);
       scroll-behavior: smooth;
+      line-height: 1.6;
     }
 
     .navbar {
-      background-color: #010409;
+      background-color: var(--darker-bg);
+      padding: 0.75rem 0;
+    }
+
+    .navbar-brand img {
+      width: 180px;
+      height: auto;
     }
 
     .navbar a,
     .navbar-brand {
-      color: #58a6ff !important;
+      color: var(--primary) !important;
     }
 
     .section {
-      padding: 80px 20px;
+      padding: 4rem 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .section {
+        padding: 5rem 1.5rem;
+      }
     }
 
     .section-dark {
-      background-color: #161b22;
+      background-color: var(--section-dark);
     }
 
-
-
     footer {
-      background: #010409;
+      background: var(--darker-bg);
       color: white;
-      text-align: center;
-      padding: 30px 10px;
+      padding: 2rem 1rem;
     }
 
     .highlight {
-      color: #58a6ff;
+      color: var(--primary);
     }
 
     .img-fluid {
       border-radius: 12px;
+      max-width: 100%;
+      height: auto;
     }
 
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
-    }
-
-    .icon-box {
-      background-color: #21262d;
+    /* Card Styles */
+    .card-style {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
       border-radius: 16px;
-      border: 1px solid #30363d;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.3s ease;
+      height: 100%;
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
     }
 
-    .icon-box:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(88, 166, 255, 0.15);
+    .card-style:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(88, 166, 255, 0.1);
+      border-color: var(--primary);
     }
 
-    .icon-box h4 {
+    /* Icon Boxes */
+    .icon-box {
+      text-align: center;
+    }
+
+    .icon-box i {
+      font-size: 2.25rem;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+    }
+
+    .icon-box h5 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
       font-weight: 600;
-      color: #ffffff;
     }
 
-    .icon-box ul li {
-      font-size: 16px;
-      line-height: 1.6;
+    .icon-box p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
     }
 
+    /* Mission/Vision Boxes */
+    .mv-box {
+      padding: 1.75rem;
+    }
+
+    .mv-box h4 {
+      font-size: 1.35rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .mv-box h4 img {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .mv-box ul {
+      padding-left: 0;
+    }
+
+    .mv-box li {
+      list-style: none;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: flex-start;
+      font-size: 0.95rem;
+    }
+
+    .mv-box li i {
+      color: #2ea043;
+      margin-right: 0.5rem;
+      font-size: 1rem;
+      margin-top: 0.2rem;
+    }
+
+    /* Team Cards */
+    .team-card {
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .team-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--card-border);
+      margin: 0 auto 1rem;
+    }
+
+    .team-card h6 {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .team-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 767.98px) {
+      .navbar-brand img {
+        width: 150px;
+      }
+      
+      .section {
+        padding: 3rem 1rem;
+      }
+      
+      .mv-box {
+        padding: 1.25rem;
+      }
+      
+      .team-card img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    /* Animations */
+    [data-aos] {
+      transition-property: transform, opacity;
+    }
 
     @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
       to {
         opacity: 1;
         transform: translateY(0);
       }
+    }
+
+    .fade-up {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    /* Spacing Utilities */
+    .mb-section {
+      margin-bottom: 3rem;
+    }
+
+    .lead {
+      font-size: 1.15rem;
     }
   </style>
 </head>
@@ -93,8 +231,10 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="index.html">EcogenX</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand" href="#">
+        <img src="images/Ecogen_X_PNG_Logo.png" alt="EcogenX Logo" class="img-fluid">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -109,28 +249,27 @@
     </div>
   </nav>
 
-  <!-- Hero Image -->
+  <!-- Hero Section -->
   <section class="section text-center">
-    <!-- Image size: 1200x500 -->
-    <img src="https://via.placeholder.com/1200x500?text=EcogenX+Mission" class="img-fluid mb-4"
-      alt="Our Mission Banner" />
-    <h2 class="display-5" data-aos="fade-up">About <span class="highlight">EcogenX Innovations</span></h2>
-    <p class="lead" data-aos="fade-up" data-aos-delay="200">
-      We're not just a company. We're a movement leading India into a sustainable, waste-free, and tech-powered future.
-    </p>
+    <div class="container">
+      <img src="https://via.placeholder.com/1200x500?text=EcogenX+Mission" class="img-fluid mb-4 mb-md-5" alt="Our Mission Banner">
+      <h2 class="display-5 mb-3" data-aos="fade-up">About <span class="highlight">EcogenX Innovations</span></h2>
+      <p class="lead mx-auto" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="100">
+        We're not just a company. We're a movement leading India into a sustainable, waste-free, and tech-powered future.
+      </p>
+    </div>
   </section>
 
   <!-- Our Story -->
-  <section class="section-dark section" data-aos="fade-up">
+  <section class="section-dark section">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 mb-4">
-          <!-- Image size: 600x400 -->
-          <img src="https://via.placeholder.com/600x400?text=Smart+Waste+Tech" class="img-fluid" alt="Our Story Image">
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+          <img src="./images/Our_story.jpg" class="img-fluid shadow" alt="Our Story Image">
         </div>
-        <div class="col-lg-6">
-          <h3 class="mb-3">Our Story</h3>
-          <p>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+          <h3 class="mb-3 mb-md-4">Our Story</h3>
+          <p class="mb-3">
             Born in the heart of Greater Hyderabad, EcogenX Innovations was founded with a mission to revolutionize how
             India handles waste. We recognized early that the traditional systems were broken — overburdened,
             inefficient, and harming our environment.
@@ -145,145 +284,183 @@
   </section>
 
   <!-- Vision and Mission -->
-  <!-- Vision and Mission Section – Enhanced Styling -->
-  <section class="section container text-center">
-    <div class="row gy-5 gx-4">
-      <!-- Our Vision -->
-      <div class="col-md-6 icon-box p-4" data-aos="fade-up">
-        <i class="fas fa-eye fa-2x mb-3 text-info"></i>
-        <h4 class="mb-4">Our Vision</h4>
-        <ul class="text-start list-unstyled px-2">
-          <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Waste is a resource, not garbage</li>
-          <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Every home contributes to a greener
-            India</li>
-          <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Recycling is effortless & everyday</li>
-          <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Non-recyclables fuel clean energy</li>
-          <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Future generations live waste-resilient
-            lives</li>
-        </ul>
-      </div>
+  <section class="section">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Our Vision -->
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="card-style mv-box">
+            <h4>
+              <img src="./images/Icons_Our_Vision.png" alt="Our Vision">
+              Our Vision
+            </h4>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Waste is a resource, not garbage</li>
+              <li><i class="fas fa-check-circle"></i> Every home contributes to a greener India</li>
+              <li><i class="fas fa-check-circle"></i> Recycling is effortless & everyday</li>
+              <li><i class="fas fa-check-circle"></i> Non-recyclables fuel clean energy</li>
+              <li><i class="fas fa-check-circle"></i> Future generations live waste-resilient lives</li>
+            </ul>
+          </div>
+        </div>
 
-      <!-- Our Mission -->
-      <div class="col-md-6 icon-box p-4" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-bullseye fa-2x mb-3 text-warning"></i>
-        <h4 class="mb-4">Our Mission</h4>
-        <ul class="text-start list-unstyled px-2">
-          <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Make recycling simple and habitual</li>
-          <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Smart, doorstep waste collection
-            systems</li>
-          <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Inspire action via tech and rewards
-          </li>
-          <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Build a waste-free circular economy
-          </li>
-          <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Create social and economic
-            opportunities</li>
-          <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Convert waste into clean energy</li>
-        </ul>
+        <!-- Our Mission -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-style mv-box">
+            <h4>
+              <img src="./images/Icons_Our_Mission.png" alt="Our Mission Icon">
+              Our Mission
+            </h4>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Make recycling simple and habitual</li>
+              <li><i class="fas fa-check-circle"></i> Smart, doorstep waste collection systems</li>
+              <li><i class="fas fa-check-circle"></i> Inspire action via tech and rewards</li>
+              <li><i class="fas fa-check-circle"></i> Build a waste-free circular economy</li>
+              <li><i class="fas fa-check-circle"></i> Create social and economic opportunities</li>
+              <li><i class="fas fa-check-circle"></i> Convert waste into clean energy</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-
-
   <!-- Core Innovations -->
-  <section class="section-dark section container text-center">
-    <h3 class="mb-5" data-aos="fade-up">Our Core Innovations</h3>
-    <div class="row">
-      <div class="col-md-4 icon-box" data-aos="fade-up">
-        <i class="fas fa-microchip"></i>
-        <h5>Smart Infrastructure</h5>
-        <p>AI-powered reverse vending, shredding bins, and real-time waste tracking — making recycling tech-savvy and
-          transparent.</p>
-      </div>
-      <div class="col-md-4 icon-box" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-door-open"></i>
-        <h5>Doorstep Convenience</h5>
-        <p>Biodegradable bags, weekly collections, and prompt services for homes, offices, and communities.</p>
-      </div>
-      <div class="col-md-4 icon-box" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-gift"></i>
-        <h5>Incentive-Driven</h5>
-        <p>Cashbacks, discounts, and more — sustainability is now rewarding for everyone.</p>
-      </div>
-      <div class="col-md-4 icon-box" data-aos="fade-up">
-        <i class="fas fa-recycle"></i>
-        <h5>Waste-to-Energy</h5>
-        <p>Non-recyclable waste fuels clean energy, supporting off-grid areas and cutting fossil fuel use.</p>
-      </div>
-      <div class="col-md-4 icon-box" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-users"></i>
-        <h5>Community Empowerment</h5>
-        <p>Creating jobs for women, spreading awareness, and encouraging grassroots action for lasting change.</p>
-      </div>
-      <div class="col-md-4 icon-box" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-chart-line"></i>
-        <h5>Scalable Impact</h5>
-        <p>From Hyderabad to all of India — a growth model built for large-scale, measurable impact.</p>
+  <section class="section-dark section">
+    <div class="container text-center">
+      <h3 class="mb-4 mb-md-5" data-aos="fade-up">Our Core Innovations</h3>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up">
+          <div class="card-style icon-box">
+            <i class="fas fa-microchip"></i>
+            <h5>Smart Infrastructure</h5>
+            <p>AI-powered reverse vending, shredding bins, and real-time waste tracking — making recycling tech-savvy and transparent.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+          <div class="card-style icon-box">
+            <i class="fas fa-door-open"></i>
+            <h5>Doorstep Convenience</h5>
+            <p>Biodegradable bags, weekly collections, and prompt services for homes, offices, and communities.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-style icon-box">
+            <i class="fas fa-gift"></i>
+            <h5>Incentive-Driven</h5>
+            <p>Cashbacks, discounts, and more — sustainability is now rewarding for everyone.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up">
+          <div class="card-style icon-box">
+            <i class="fas fa-recycle"></i>
+            <h5>Waste-to-Energy</h5>
+            <p>Non-recyclable waste fuels clean energy, supporting off-grid areas and cutting fossil fuel use.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+          <div class="card-style icon-box">
+            <i class="fas fa-users"></i>
+            <h5>Community Empowerment</h5>
+            <p>Creating jobs for women, spreading awareness, and encouraging grassroots action for lasting change.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-style icon-box">
+            <i class="fas fa-chart-line"></i>
+            <h5>Scalable Impact</h5>
+            <p>From Hyderabad to all of India — a growth model built for large-scale, measurable impact.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Our Values -->
-  <section class="section container" data-aos="fade-up">
-    <h3 class="text-center mb-4">Our Core Values</h3>
-    <div class="row text-center">
-      <div class="col-md-3 icon-box">
-        <i class="fas fa-globe-asia"></i>
-        <h6>Environmental Responsibility</h6>
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-4 mb-md-5" data-aos="fade-up">
+        <h3>Our Core Values</h3>
+        <p class="lead text-muted">Guiding principles that drive our mission forward</p>
       </div>
-      <div class="col-md-3 icon-box">
-        <i class="fas fa-users-cog"></i>
-        <h6>Tech for Good</h6>
-      </div>
-      <div class="col-md-3 icon-box">
-        <i class="fas fa-hands-helping"></i>
-        <h6>Inclusivity</h6>
-      </div>
-      <div class="col-md-3 icon-box">
-        <i class="fas fa-lightbulb"></i>
-        <h6>Innovation</h6>
+      <div class="row g-4">
+        <div class="col-6 col-md-3" data-aos="fade-up">
+          <div class="card-style icon-box">
+            <i class="fas fa-globe-asia"></i>
+            <h6>Environmental Responsibility</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="50">
+          <div class="card-style icon-box">
+            <i class="fas fa-users-cog"></i>
+            <h6>Tech for Good</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-style icon-box">
+            <i class="fas fa-hands-helping"></i>
+            <h6>Inclusivity</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="150">
+          <div class="card-style icon-box">
+            <i class="fas fa-lightbulb"></i>
+            <h6>Innovation</h6>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Leadership Team -->
-  <section class="section-dark section" data-aos="fade-up">
-    <div class="container text-center">
-      <h3 class="mb-5">Leadership Team</h3>
-      <div class="row justify-content-center">
-        <div class="col-md-3 mb-4">
-          <!-- Image size: 200x200 -->
-          <img src="https://via.placeholder.com/200x200?text=Founder" class="img-fluid rounded-circle mb-2"
-            alt="Founder">
-          <h6 class="mb-0">Aarav Menon</h6>
-          <p class="small text-muted">Founder & CEO</p>
-        </div>
-        <div class="col-md-3 mb-4">
-          <img src="https://via.placeholder.com/200x200?text=CTO" class="img-fluid rounded-circle mb-2" alt="CTO">
-          <h6 class="mb-0">Sneha Verma</h6>
-          <p class="small text-muted">Chief Technology Officer</p>
-        </div>
-        <div class="col-md-3 mb-4">
-          <img src="https://via.placeholder.com/200x200?text=COO" class="img-fluid rounded-circle mb-2" alt="COO">
-          <h6 class="mb-0">Rahul Singh</h6>
-          <p class="small text-muted">Chief Operations Officer</p>
-        </div>
+  <!-- Founder Section -->
+<section class="section-dark section" data-aos="fade-up">
+  <div class="container">
+    <div class="card bg-dark text-white border-0 shadow-lg flex-md-row p-4">
+      <div class="col-md-4 text-center mb-4 mb-md-0">
+        <!-- Replace with actual image -->
+        <img src="https://via.placeholder.com/250x250?text=Founder" class="img-fluid rounded-circle" alt="Founder Image" style="max-width: 200px;">
+        <h5 class="mt-3 mb-1">Kancharla Raghucharan</h5>
+        <p class="text-muted mb-0">Founder, EcogenX Innovations</p>
+        <small class="text-light">MSc in Sustainability Management<br>NEOMA Business School, France</small>
+      </div>
+      <div class="col-md-8 ps-md-5 d-flex flex-column justify-content-center">
+        <p>The idea for EcogenX was born in early 2021 when our founder, Kancharla Raghucharan, was still a student. During his college days, an incubation program by EdVenture Park ignited the beginning of this journey. With a basic yet impactful idea for responsible waste management, Raghucharan pitched the concept to the EdVenture Park team — and got selected.</p>
+        <p>With the guidance and support of the EdVenture Park team, especially mentor Meraj Faheem, EcogenX evolved from a student project into a full-scale startup working towards real environmental impact.</p>
+        <p>Raghucharan’s academic journey at NEOMA Business School, where he earned a Master’s degree in Sustainability Management, further strengthened his vision to create practical, community-driven waste management solutions for India.</p>
+        <p class="mb-0">Today, EcogenX works with households, schools, corporates, and communities to turn waste into resources, reduce pollution, and build a cleaner, greener India.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 EcogenX Innovations Pvt Ltd. All rights reserved. | <a href="mailto:hello@ecogenx.go"
-        class="text-decoration-none text-light">hello@ecogenx.go</a></p>
+    <div class="container">
+      <p class="mb-0">© 2025 EcogenX Innovations Pvt Ltd. All rights reserved. | <a href="mailto:hello@ecogenx.go" class="text-decoration-none text-light">hello@ecogenx.go</a></p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 600,
+        once: true,
+        easing: 'ease-out-quad',
+      });
+      
+      // Add smooth scrolling to all links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
     });
   </script>
 </body>
