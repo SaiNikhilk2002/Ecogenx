@@ -39,6 +39,21 @@
       text-align: center;
       padding: 30px 10px;
     }
+    .accordion-button {
+      background-color: #21262d;
+      color: #58a6ff;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #30363d;
+      color: #ffffff;
+    }
+    .accordion-body {
+      background-color: #1e242b;
+      color: #f0f0f0;
+    }
+    .faq-section h3 {
+      color: #58a6ff;
+    }
   </style>
 </head>
 <body>
@@ -47,8 +62,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="#">
-        <img src="images/Ecogen_X_PNG_Logo.png" alt="EcogenX Logo" style="width: 220px;">
-      </a>
+      <img src="images/Ecogen_X_PNG_Logo.png" alt="EcogenX Logo" style="width: 220px;">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -73,7 +88,6 @@
     <!-- Contact Form -->
     <div class="col-lg-6">
       <form action="https://formsubmit.co/b6e3809fbacfa3d901e8e007a8eed0a1" method="POST">
-        <!-- Hidden settings -->
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="box">
         <input type="hidden" name="_autoresponse" value="Thank you for contacting EcogenX! We'll get back to you soon.">
@@ -101,13 +115,124 @@
         <h5>Contact Details</h5>
         <p><i class="fas fa-envelope me-2"></i> <a href="mailto:hello@ecogenx.go" class="text-decoration-none text-light">hello@ecogenx.go</a></p>
         <p><i class="fas fa-globe me-2"></i> <a href="https://www.ecogenx.in" class="text-decoration-none text-light" target="_blank">www.ecogenx.in</a></p>
-        <p><i class="fas fa-location-dot me-2"></i>302,16-2-701/1, MJR Classic,Malakpet,Near New Market Metro Station, Opposite to Essar Gas Pump Hyderabad, Telangana, India</p>
+        <p><i class="fas fa-location-dot me-2"></i>302,16-2-701/1, MJR Classic,Malakpet, Near New Market Metro Station, Opp. Essar Gas Pump, Hyderabad, Telangana, India</p>
         <p><i class="fas fa-phone me-2"></i> +91-7995423188</p>
 
         <h5 class="mt-4">Follow Us</h5>
         <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
         <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
         <a href="#" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ Section -->
+<div class="section section-dark faq-section container">
+  <h2 class="text-center mb-5">📚 Frequently Asked Questions (FAQs)</h2>
+
+  <div class="accordion" id="faqAccordion">
+
+    <!-- 🚀 Getting Started -->
+    <h3 class="mb-3">🚀 Getting Started</h3>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+          How can I book a service or join EcogenX?
+        </button>
+      </h2>
+      <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Click on “Express My Interest” on our website and fill your details. Our team will contact you to begin your recycling journey.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+          What kind of waste does EcogenX collect?
+        </button>
+      </h2>
+      <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          We collect dry recyclable waste like plastic, cardboard, paper, metals, e-waste, and even cigarette butts.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+          Do I need to sort the waste before pickup?
+        </button>
+      </h2>
+      <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          No. Just use our biodegradable EcogenX bag for all dry recyclables. We sort everything at our facility.
+        </div>
+      </div>
+    </div>
+
+    <!-- 🚬 Cigarette Butt Recycling -->
+    <h3 class="mt-5 mb-3">🚬 Cigarette Butt Recycling</h3>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+          What is EcogenX's cigarette butt recycling initiative?
+        </button>
+      </h2>
+      <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          We recycle cigarette butts into eco-products like stuffing, compost, and paper using smart bins across Hyderabad.
+        </div>
+      </div>
+    </div>
+
+    <!-- 🏠 Home Recycling -->
+    <h3 class="mt-5 mb-3">🏠 Home Recycling Made Easy</h3>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+          What goes into the EcogenX bag?
+        </button>
+      </h2>
+      <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Plastics, wrappers, cans, papers, and foils—clean and dry. We’ll handle the rest!
+        </div>
+      </div>
+    </div>
+
+    <!-- 🎁 Rewards -->
+    <h3 class="mt-5 mb-3">🎁 Rewards & Community Impact</h3>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+          Do I get rewarded for recycling?
+        </button>
+      </h2>
+      <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes! Earn Zero Carbon Certificates, eco-rewards, and exclusive gifts or cashback.
+        </div>
+      </div>
+    </div>
+
+    <!-- 📬 Final -->
+    <h3 class="mt-5 mb-3">📬 Still Have Questions?</h3>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+          How do I contact EcogenX directly?
+        </button>
+      </h2>
+      <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          📧 Email: hello@ecogenx.in<br>
+          🌐 Website: www.ecogenx.in<br>
+          📱 Follow us on Instagram, LinkedIn, Twitter, WhatsApp
+        </div>
       </div>
     </div>
   </div>

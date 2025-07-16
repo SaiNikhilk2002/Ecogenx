@@ -51,96 +51,15 @@
       margin-bottom: 15px;
     }
 
-    /* Carousel Container */
-    .carousel-container {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 60px;
-      /* Space for side controls */
-    }
-
-    /* Carousel Controls */
-    .carousel-control {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: rgba(88, 166, 255, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      z-index: 100;
-    }
-
-    .carousel-control:hover {
-      background-color: rgba(88, 166, 255, 0.9);
-      transform: translateY(-50%) scale(1.1);
-    }
-
-    .carousel-control i {
-      color: white;
-      font-size: 20px;
-    }
-
-    .left-control {
-      left: 0;
-    }
-
-    .right-control {
-      right: 0;
-    }
-
-    /* Carousel Indicators */
-    .carousel-indicators {
-      position: absolute;
-      bottom: 20px;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      z-index: 100;
-    }
-
-    .carousel-indicator {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.3);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .carousel-indicator.active {
-      background-color: #58a6ff;
-      transform: scale(1.3);
-    }
-
-    /* Solutions Carousel */
-    .solutions-carousel {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-    }
-
     .solution-detail {
-      width: 100%;
-      display: none;
       padding: 80px 20px;
       position: relative;
       min-height: 100vh;
+      display: flex;
       flex-direction: column;
       justify-content: center;
-    }
-
-    .solution-detail.active {
-      display: flex;
+      display: none;
+      /* Initially hidden */
     }
 
     .solution-detail::before {
@@ -217,39 +136,78 @@
       padding: 30px 10px;
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .carousel-container {
-        padding: 0 40px;
-      }
+    .carousel-controls {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
 
-      .carousel-control {
-        width: 40px;
-        height: 40px;
-      }
+    .carousel-control {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgba(88, 166, 255, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
 
-      .solution-detail {
-        padding: 60px 15px;
-        min-height: auto;
+    .carousel-control:hover {
+      background-color: rgba(88, 166, 255, 0.9);
+      transform: scale(1.1);
+    }
+
+    .carousel-control i {
+      color: white;
+      font-size: 20px;
+    }
+
+    .carousel-indicators {
+      position: fixed;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    .carousel-indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-indicator.active {
+      background-color: #58a6ff;
+      transform: scale(1.3);
+    }
+
+    @media (min-width: 768px) {
+      .icon-box {
+        padding: 16px 8px;
       }
     }
 
-    @media (max-width: 576px) {
-      .carousel-container {
-        padding: 0 30px;
-      }
+    @media (max-width: 768px) {
 
-      .carousel-control {
-        width: 35px;
-        height: 35px;
-      }
-
-      .carousel-control i {
-        font-size: 16px;
-      }
-
-      .solution-detail {
-        padding: 40px 10px;
+      .carousel-controls,
+      .carousel-indicators {
+        position: static;
+        transform: none;
+        justify-content: center;
+        margin-top: 20px;
       }
     }
   </style>
@@ -344,7 +302,7 @@
     </div>
   </div>
 
-  <!-- Carousel Controls
+  <!-- Carousel Controls -->
   <div class="carousel-controls">
     <div class="carousel-control" onclick="prevSolution()">
       <i class="fas fa-chevron-left"></i>
@@ -352,9 +310,9 @@
     <div class="carousel-control" onclick="nextSolution()">
       <i class="fas fa-chevron-right"></i>
     </div>
-  </div> -->
+  </div>
 
-  <!-- Carousel Indicators
+  <!-- Carousel Indicators -->
   <div class="carousel-indicators">
     <div class="carousel-indicator active" onclick="showSolution('solution1')"></div>
     <div class="carousel-indicator" onclick="showSolution('solution2')"></div>
@@ -364,16 +322,10 @@
     <div class="carousel-indicator" onclick="showSolution('solution6')"></div>
     <div class="carousel-indicator" onclick="showSolution('solution7')"></div>
     <div class="carousel-indicator" onclick="showSolution('solution8')"></div>
-  </div> -->
+  </div>
 
   <!-- Solutions Carousel -->
   <div class="solutions-carousel">
-
-    <div class="carousel-control left-control" onclick="prevSolution()">
-      <i class="fas fa-chevron-left"></i>
-    </div>
-
-
     <!-- Phase 1 Section Weekly Waste Collection -->
     <div id="solution1" class="solution-detail container" data-aos="fade-up">
       <div class="phase-label"><i class="fas fa-layer-group"></i> Phase 1</div>
@@ -748,47 +700,80 @@
       </ul>
     </div>
 
-    <!-- Phase 8: Circular Waste-to-Energy Conversion -->
-    <div id="solution8" class="solution-detail container" data-aos="fade-up">
-      <div class="phase-label"><i class="fas fa-recycle"></i> Phase 8</div>
-      <h3>Circular Waste-to-Energy Conversion</h3>
 
-      <!-- Recycling & Energy Conversion -->
+
+
+
+
+
+
+
+    <!-- Phase 7: App-Based Waste Collection -->
+    <div id="solution8" class="solution-detail container" data-aos="fade-up">
+      <div class="phase-label"><i class="fas fa-layer-group"></i> Phase 7</div>
+      <h3>App-Based Waste Collection</h3>
+
+      <!-- Overview -->
       <p class="mb-4">
-        <strong>Recycling & Energy Conversion:</strong><br>
-        Plastic waste is efficiently separated into recyclable and non-recyclable categories.
-        Recyclables are transformed into new products such as packaging and textile fibers,
-        while non-recyclables are converted into usable energy — ensuring nothing ends up in a landfill.
+        <strong>Overview:</strong><br>
+        A smart plastic collection system designed for communities, households, corporates, and retail chains through
+        the
+        EcogenX mobile app.
       </p>
 
+      <!-- Community-Based Collection -->
+      <h6 class="mb-3">Community & Apartment Based Collection:</h6>
+      <div class="row gy-4 mb-5">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-box h-100">
+            <i class="fas fa-shopping-bag text-info fa-2x mb-2"></i>
+            <h6>Dedicated Collection Bags</h6>
+            <p class="mb-0">Residents receive plastic bags for collection — no hassle of sorting themselves.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-box h-100">
+            <i class="fas fa-calendar-week text-warning fa-2x mb-2"></i>
+            <h6>Weekly Scheduled Pickups</h6>
+            <p class="mb-0">Pickup happens weekly with optimized routes to ensure timely collection.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon-box h-100">
+            <i class="fas fa-balance-scale text-success fa-2x mb-2"></i>
+            <h6>Weighing & Rewards</h6>
+            <p class="mb-0">Plastic is weighed, and users receive reward points directly on the app.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- On-Demand Pickup -->
+      <h6 class="mb-3">On-Demand Pickup via App:</h6>
       <div class="row gy-4 mb-5">
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="d-flex align-items-start gap-3">
-            <i class="fas fa-recycle fa-2x text-success"></i>
+            <i class="fas fa-box-open fa-2x text-primary"></i>
             <div>
-              <h6 class="mb-1">1. Waste Sorting</h6>
-              <p class="mb-0">Plastic is separated into recyclable and non-recyclable types at our facilities.</p>
+              <h6 class="mb-1">1. Store Plastic Waste</h6>
+              <p class="mb-0">Users collect wrappers, oil bottles, chairs, and more in storage.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
           <div class="d-flex align-items-start gap-3">
-            <i class="fas fa-cube fa-2x text-warning"></i>
+            <i class="fas fa-mobile-alt fa-2x text-info"></i>
             <div>
-              <h6 class="mb-1">2. Material Recovery</h6>
-              <p class="mb-0">Recyclable plastics are processed into packaging,
-                textiles, or manufacturing materials.
-              </p>
+              <h6 class="mb-1">2. Schedule Pickup</h6>
+              <p class="mb-0">Pickup requests can be made anytime using the EcogenX app.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
           <div class="d-flex align-items-start gap-3">
-            <i class="fas fa-bolt fa-2x text-primary"></i>
+            <i class="fas fa-hand-holding-usd fa-2x text-success"></i>
             <div>
-              <h6 class="mb-1">3. Energy Generation</h6>
-              <p class="mb-0">Non-recyclables are converted into clean energy instead of being landfilled.
-              </p>
+              <h6 class="mb-1">3. Instant Rewards</h6>
+              <p class="mb-0">Waste is recycled or converted into energy, and users are rewarded instantly.</p>
             </div>
           </div>
         </div>
@@ -799,47 +784,41 @@
       <div class="row text-center mb-5">
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="icon-box h-100">
-            <i class="fas fa-circle-notch text-info fa-2x mb-2"></i>
-            <h6>Circular Economy</h6>
-            <p class="mb-0">Every piece of plastic is reused, recycled, or repurposed — nothing goes to waste.</p>
+            <i class="fas fa-house-user text-warning fa-2x mb-2"></i>
+            <h6>Convenience</h6>
+            <p class="mb-0">Home collection removes the burden of dropping off recyclables at centers.</p>
           </div>
         </div>
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
           <div class="icon-box h-100">
-            <i class="fas fa-solar-panel text-warning fa-2x mb-2"></i>
-            <h6>Clean Energy</h6>
-            <p class="mb-0">Provides renewable energy for off-grid communities and backup energy grids.</p>
+            <i class="fas fa-network-wired text-info fa-2x mb-2"></i>
+            <h6>Scalability</h6>
+            <p class="mb-0">Perfectly expandable to corporate offices, restaurants, and retail chains.</p>
           </div>
         </div>
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
           <div class="icon-box h-100">
-            <i class="fas fa-fire text-danger fa-2x mb-2"></i>
-            <h6>Fossil Fuel Reduction</h6>
-            <p class="mb-0">Helps reduce reliance on non-renewable resources like coal and oil.</p>
+            <i class="fas fa-route text-success fa-2x mb-2"></i>
+            <h6>Efficiency</h6>
+            <p class="mb-0">AI-based routing boosts logistics, reduces cost, and increases pickup speed.</p>
           </div>
         </div>
       </div>
+
+      <!-- Incentives -->
+      <h6 class="mb-3">Incentives for Users:</h6>
+      <ul class="mb-4">
+        <li>Grocery discounts at D-Mart & Big Bazaar</li>
+        <li>Metro and bus fare reductions</li>
+        <li>Amazon/Flipkart shopping coupons</li>
+        <li>Paytm, PhonePe, Google Pay cashback</li>
+        <li>Discounts on movie tickets and restaurant bills</li>
+      </ul>
     </div>
-
-
-    <div class="carousel-control right-control" onclick="nextSolution()">
-      <i class="fas fa-chevron-right"></i>
-    </div>
-
-    <!-- Carousel Indicators -->
-    <div class="carousel-indicators">
-      <div class="carousel-indicator active" onclick="showSolution('solution1')"></div>
-      <div class="carousel-indicator" onclick="showSolution('solution2')"></div>
-      <div class="carousel-indicator" onclick="showSolution('solution3')"></div>
-      <div class="carousel-indicator" onclick="showSolution('solution4')"></div>
-      <div class="carousel-indicator" onclick="showSolution('solution5')"></div>
-      <div class="carousel-indicator" onclick="showSolution('solution6')"></div>
-      <div class="carousel-indicator" onclick="showSolution('solution7')"></div>
-      <div class="carousel-indicator" onclick="showSolution('solution8')"></div>
-    </div>
-
 
   </div>
+
 
   <footer>
     <p>© 2025 EcogenX Innovations Pvt Ltd. All rights reserved. |
@@ -850,7 +829,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    // Initialize AOS animations
     AOS.init({
       once: true,
       duration: 800,
@@ -858,37 +836,36 @@
       anchorPlacement: 'top-bottom'
     });
 
-    // Keep your existing solution navigation functions but ensure they move left/right
-    let currentSolution = 1;
-    const totalSolutions = 8;
+
+    // Current solution index
+    let currentSolutionIndex = 0;
+    const solutions = ['solution1', 'solution2', 'solution3', 'solution4', 'solution5', 'solution6', 'solution7', 'solution8'];
 
     function showSolution(id) {
-      document.querySelectorAll('.solution-detail').forEach(sol => {
-        sol.style.display = 'none';
+      // Hide all solutions
+      document.querySelectorAll('.solution-detail').forEach(el => {
+        el.style.display = 'none';
       });
+
+      // Show selected solution
       document.getElementById(id).style.display = 'block';
 
-      // Update current solution index
-      currentSolution = parseInt(id.replace('solution', ''));
+      // Update current index
+      currentSolutionIndex = solutions.indexOf(id);
 
       // Update active indicator
-      document.querySelectorAll('.carousel-indicator').forEach((ind, index) => {
-        ind.classList.toggle('active', index === currentSolution - 1);
-      });
+      updateIndicators();
     }
 
     function nextSolution() {
-      currentSolution = currentSolution >= totalSolutions ? 1 : currentSolution + 1;
-      showSolution(`solution${currentSolution}`);
+      currentSolutionIndex = (currentSolutionIndex + 1) % solutions.length;
+      showSolution(solutions[currentSolutionIndex]);
     }
 
     function prevSolution() {
-      currentSolution = currentSolution <= 1 ? totalSolutions : currentSolution - 1;
-      showSolution(`solution${currentSolution}`);
+      currentSolutionIndex = (currentSolutionIndex - 1 + solutions.length) % solutions.length;
+      showSolution(solutions[currentSolutionIndex]);
     }
-
-    // Initialize first solution
-    showSolution('solution1');
 
     function updateIndicators() {
       document.querySelectorAll('.carousel-indicator').forEach((indicator, index) => {
@@ -896,19 +873,12 @@
       });
     }
 
-    // Initialize first solution and indicators
+    // Initialize first solution
     document.addEventListener('DOMContentLoaded', function () {
       showSolution('solution1');
-
-      // Add keyboard navigation
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowRight') {
-          nextSolution();
-        } else if (e.key === 'ArrowLeft') {
-          prevSolution();
-        }
-      });
     });
+
+
   </script>
 </body>
 

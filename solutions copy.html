@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solutions | EcogenX Innovations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #f0f0f0;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background-color: #010409;
+    }
+
+    .navbar a,
+    .navbar-brand {
+      color: #58a6ff !important;
+    }
+
+    .section {
+      padding: 60px 20px;
+    }
+
+    .icon-box {
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 20px 10px;
+      background-color: #21262d;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+
+    .icon-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 18px rgba(88, 166, 255, 0.2);
+      border-color: #58a6ff;
+    }
+
+    .icon-box i {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .solution-detail {
+      padding: 80px 20px;
+      border-top: 2px solid #30363d;
+    }
+
+    .phase-label {
+      display: inline-block;
+      padding: 6px 12px;
+      background: #21262d;
+      color: #58a6ff;
+      border-left: 5px solid #58a6ff;
+      font-weight: bold;
+      border-radius: 0 5px 5px 0;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .solution-detail i {
+      margin-right: 10px;
+    }
+
+    .solution-detail h3 {
+      color: #58a6ff;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #010409;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    @media (min-width: 768px) {
+      .icon-box {
+        padding: 16px 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/Ecogen_X_PNG_Logo.png" alt="EcogenX Logo" style="width: 220px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="solutions.html">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link" href="impact.html">Impact</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Solutions Cards -->
+  <div class="section container text-center">
+    <h2 data-aos="fade-down">Our Smart Waste Solutions</h2>
+    <p class="mt-3 mb-5" data-aos="fade-up" data-aos-delay="150">
+      Tap on each service to learn how we turn waste into opportunity.
+    </p>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="icon-box" onclick="location.href='#solution1'" data-aos="zoom-in">
+          <!-- <i class="fas fa-calendar-check text-warning"></i> -->
+
+          <img src="./images/Icons/Solutions/full_color_Weekly_Waste_Collection.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="imgae">
+
+          <h6 class="mt-2">Weekly Waste Collection</h6>
+        </div>
+      </div>
+      <div class="col">
+        <div class="icon-box" onclick="location.href='#solution2'" data-aos="zoom-in" data-aos-delay="100">
+          <!-- <i class="fas fa-smoking text-danger"></i> -->
+           <img src="./images/Icons/Solutions/full_color_Cigarette_Waste_Collection_Boxes.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="imgae">
+          <h6 class="mt-2">Cigarette Waste Boxes</h6>
+        </div>
+      </div>
+      <div class="col">
+        <div class="icon-box" onclick="location.href='#solution3'" data-aos="zoom-in" data-aos-delay="200">
+          <!-- <i class="fas fa-trash-alt text-success"></i> -->
+           <img src="./images/Icons/Solutions/full_color_Segregated_Dustbins.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="imgae">
+          <h6 class="mt-2">Segregated Dustbins</h6>
+        </div>
+      </div>
+      <div class="col">
+        <div class="icon-box" onclick="location.href='#solution4'" data-aos="zoom-in" data-aos-delay="300">
+          <!-- <i class="fas fa-battery-full text-primary"></i> -->
+           <img src="./images/Icons/Solutions/full_color_E_Waste_Collection_Bins.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="imgae">
+          <h6 class="mt-2">E-Waste Bins</h6>
+        </div>
+      </div>
+      <div class="col">
+        <div class="icon-box" onclick="location.href='#solution5'" data-aos="zoom-in" data-aos-delay="400">
+          <!-- <i class="fas fa-shredder text-info"></i> -->
+           <img src="./images/Icons/Solutions/full_color_Shredding_Bins.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="imgae">
+          <h6 class="mt-2">Shredding Bins</h6>
+        </div>
+      </div>
+      <div class="col">
+        <div class="icon-box" onclick="location.href='#solution6'" data-aos="zoom-in" data-aos-delay="500">
+          <!-- <i class="fas fa-receipt text-warning"></i> -->
+           <img src="./images/Icons/Solutions/full_color_Smart_Reverse_Vending_Machines.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="imgae">
+          <h6 class="mt-2">Reverse Vending Machines</h6>
+        </div>
+      </div>
+      <div class="col">
+        <div class="icon-box" onclick="location.href='#solution7'" data-aos="zoom-in" data-aos-delay="600">
+          <!-- <i class="fas fa-mobile-alt text-info"></i> -->
+           <img src="./images/Icons/Solutions/full_color_App_Based_Waste_Collection.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="imgae">
+          <h6 class="mt-2">App-Based Collection</h6>
+        </div>
+      </div>
+      <div class="col">
+        <div class="icon-box" onclick="location.href='#solution8'" data-aos="zoom-in" data-aos-delay="700">
+          <!-- <i class="fas fa-bolt text-danger"></i> -->
+           <img src="./images/Icons/Solutions/full_color_Waste_to_Energy.png" style="width: 3.5rem; height: 3.5rem; margin-bottom: 1rem;"
+              alt="imgae">
+          <h6 class="mt-2">Waste-to-Energy</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase 1 Section Weekly Waste Collection -->
+  <div id="solution1" class="solution-detail container" data-aos="fade-up">
+    <div class="phase-label"><i class="fas fa-layer-group"></i> Phase 1</div>
+    <h3>Weekly Waste Collection</h3>
+    <p><strong>Overview:</strong> EcogenX’s Weekly Waste Collection initiative uses biodegradable bags to help residents
+      separate and dispose of recyclable waste. Weekly doorstep pickups encourage recycling at the community level.</p>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <i class="fas fa-leaf text-success"></i> <strong>Biodegradable Bags:</strong> Delivered to homes for easy
+        sorting.
+      </div>
+      <div class="col-md-6">
+        <i class="fas fa-home text-info"></i> <strong>Doorstep Pickups:</strong> Carried out by local women weekly.
+      </div>
+      <div class="col-md-6 mt-3">
+        <i class="fas fa-industry text-warning"></i> <strong>Sorting Facilities:</strong> Waste is processed in EcogenX
+        units.
+      </div>
+      <div class="col-md-6 mt-3">
+        <i class="fas fa-gift text-primary"></i> <strong>Incentive Program:</strong> Rewards for consistent recyclers.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Phase 2: Cigarette Waste Collection Boxes -->
+  <div id="solution2" class="solution-detail container pt-5" data-aos="fade-up">
+    <div class="phase-label"><i class="fas fa-layer-group"></i> Phase 2</div>
+    <h3>Cigarette Waste Collection Boxes</h3>
+    <p class="mb-5">
+      <strong>Overview:</strong><br>
+      Tamper-resistant bins placed at cafes, tech parks, colleges, transit hubs, and airports for safe and effective
+      cigarette waste disposal.
+    </p>
+
+    <!-- Awareness Cards -->
+    <div class="row text-center mb-5">
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box h-100">
+          <i class="fas fa-exclamation-triangle fa-2x text-warning mb-2"></i>
+          <h6>Promotes Awareness</h6>
+          <p class="mb-0">Educates about the harmful effects of cigarette waste on the environment.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box h-100">
+          <i class="fas fa-water fa-2x text-info mb-2"></i>
+          <h6>Reduces Pollution</h6>
+          <p class="mb-0">Decreases microplastic and toxin pollution caused by improper disposal.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box h-100">
+          <i class="fas fa-paw fa-2x text-success mb-2"></i>
+          <h6>Protects Wildlife</h6>
+          <p class="mb-0">Keeps waste from landfills and reduces risks to animals and ecosystems.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Process Steps -->
+    <h5 class="mb-4"><i class="fas fa-cogs text-primary"></i> Process:</h5>
+    <div class="row gy-4">
+      <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
+        <div class="d-flex align-items-start gap-3">
+          <i class="fas fa-cut fa-2x text-danger"></i>
+          <div>
+            <h6 class="mb-1">1. Component Separation</h6>
+            <p class="mb-0">Cigarette butts are dismantled into filter, paper, and tobacco.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="d-flex align-items-start gap-3">
+          <i class="fas fa-recycle fa-2x text-success"></i>
+          <div>
+            <h6 class="mb-1">2. Recycling & Composting</h6>
+            <p class="mb-0">Filters are recycled, paper reused, and tobacco composted safely.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
+        <div class="d-flex align-items-start gap-3">
+          <i class="fas fa-truck-loading fa-2x text-info"></i>
+          <div>
+            <h6 class="mb-1">3. Sent to Recycling Centers</h6>
+            <p class="mb-0">Sorted components are delivered to certified recycling facilities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Phase 3: Segregated Dustbins for Corporates & Schools -->
+  <div id="solution3" class="solution-detail container pt-5" data-aos="fade-up">
+    <div class="phase-label"><i class="fas fa-layer-group"></i> Phase 3</div>
+    <h3>Segregated Dustbins for Corporates & Schools</h3>
+    <p class="mb-5">
+      <strong>Why It Works:</strong><br>
+      Strategically shaped and color-coded bins encourage individuals — especially students — to dispose of waste
+      correctly. This initiative builds awareness and cultivates eco-friendly habits from a young age.
+    </p>
+
+    <!-- Benefit Cards -->
+    <div class="row text-center mb-5">
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box h-100">
+          <i class="fas fa-child fa-2x text-warning mb-2"></i>
+          <h6>Easy Awareness</h6>
+          <p class="mb-0">Shaped bins help children and students quickly identify the correct bin for each waste type.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box h-100">
+          <i class="fas fa-school fa-2x text-info mb-2"></i>
+          <h6>Common Usage</h6>
+          <p class="mb-0">Perfect for schools and malls — paper waste, exam sheets, bottles, cans, and more.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box h-100">
+          <i class="fas fa-recycle fa-2x text-success mb-2"></i>
+          <h6>Early Recycling Habits</h6>
+          <p class="mb-0">Fosters a lifelong habit of proper recycling starting from childhood and youth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Phase 4: E-Waste Collection Bins -->
+  <div id="solution4" class="solution-detail container pt-5" data-aos="fade-up">
+    <div class="phase-label"><i class="fas fa-layer-group"></i> Phase 4</div>
+    <h3>E-Waste Collection Bins</h3>
+    <p class="mb-5">
+      <strong>Overview:</strong><br>
+      Smart, transparent bins placed in offices and tech environments to collect batteries, cables, earbuds, and small
+      electronics. These bins simplify safe disposal and help organizations comply with green regulations.
+    </p>
+
+    <!-- Benefit Cards -->
+    <div class="row text-center mb-5">
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box h-100">
+          <i class="fas fa-exclamation-triangle fa-2x text-danger mb-2"></i>
+          <h6>Safe Hazard Disposal</h6>
+          <p class="mb-0">Prevents environmental damage by enabling safe disposal of electronic waste and toxic
+            materials.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box h-100">
+          <i class="fas fa-chart-line fa-2x text-success mb-2"></i>
+          <h6>Carbon-Saving Metrics</h6>
+          <p class="mb-0">Helps track and report carbon savings, boosting sustainability reporting for companies and
+            schools.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box h-100">
+          <i class="fas fa-bullhorn fa-2x text-info mb-2"></i>
+          <h6>Promotes E-Waste Awareness</h6>
+          <p class="mb-0">Supports eco-education and spreads awareness about proper e-waste handling and recycling.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Phase 5: Transparent Plastic Shredding Bins -->
+  <div id="solution5" class="solution-detail container pt-5" data-aos="fade-up">
+    <div class="phase-label"><i class="fas fa-layer-group"></i> Phase 5</div>
+    <h3>Transparent Plastic Shredding Bins</h3>
+
+    <!-- Overview -->
+    <p class="mb-4">
+      <strong>Overview:</strong><br>
+      Interactive, transparent bins that shred plastic waste in real-time, offering a visual and rewarding recycling
+      experience for users.
+    </p>
+
+    <!-- Use Cases -->
+    <p class="mb-4">
+      <strong>Use Cases:</strong><br>
+      Deployed at festivals, metro stations, shopping malls, and public events to drive mass participation and
+      visibility.
+    </p>
+
+    <!-- Why It Works (Benefits) -->
+    <h6 class="mb-4">Why It Works:</h6>
+    <div class="row text-center mb-5">
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box h-100">
+          <i class="fas fa-eye fa-2x text-info mb-2"></i>
+          <h6>Visually Engaging</h6>
+          <p class="mb-0">Real-time shredding captures user attention and encourages active participation.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box h-100">
+          <i class="fas fa-ban fa-2x text-danger mb-2"></i>
+          <h6>Reduces Contamination</h6>
+          <p class="mb-0">Shredding on-site prevents mixing with other waste types, preserving recyclability.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box h-100">
+          <i class="fas fa-cogs fa-2x text-success mb-2"></i>
+          <h6>Ready-to-Process Output</h6>
+          <p class="mb-0">Shredded material is directly ready for recycling plants, cutting down processing time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Phase 6: Smart Reverse Vending Machines -->
+  <div id="solution6" class="solution-detail container pt-5" data-aos="fade-up">
+    <div class="phase-label"><i class="fas fa-layer-group"></i> Phase 6</div>
+    <h3>Smart Reverse Vending Machines (RVMs)</h3>
+
+    <!-- Function -->
+    <p class="mb-4">
+      <strong>Function:</strong><br>
+      These smart machines accept plastic bottles, wrappers, and containers, sort them by type and weight, and issue
+      digital reward points that can be redeemed for cashback, travel credits, or shopping discounts.
+    </p>
+
+    <!-- Deployed At -->
+    <h6 class="mb-3">Deployed At:</h6>
+    <ul class="mb-4">
+      <li>Supermarkets & Hypermarkets (e.g., D-Mart, Reliance Fresh)</li>
+      <li>Malls & Shopping Complexes</li>
+      <li>Metro & Railway Stations</li>
+      <li>Universities, Public Parks, Corporate Offices</li>
+    </ul>
+
+    <!-- How It Works -->
+    <h6 class="mb-3">How It Works:</h6>
+    <div class="row text-center mb-5">
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box h-100">
+          <i class="fas fa-recycle fa-2x text-success mb-2"></i>
+          <h6>Accepts Plastic Waste</h6>
+          <p class="mb-0">Users deposit used plastic bottles, wrappers, and containers into the machine.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box h-100">
+          <i class="fas fa-weight fa-2x text-warning mb-2"></i>
+          <h6>Weighs & Sorts Waste</h6>
+          <p class="mb-0">Automatically detects material type, measures quantity, and sorts appropriately.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box h-100">
+          <i class="fas fa-gift fa-2x text-primary mb-2"></i>
+          <h6>Issues Reward Points</h6>
+          <p class="mb-0">Incentivizes recycling with points redeemable for transport, shopping, or cashback.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Phase 7: App-Based Waste Collection -->
+  <div id="solution7" class="solution-detail container pt-5" data-aos="fade-up">
+    <div class="phase-label"><i class="fas fa-layer-group"></i> Phase 7</div>
+    <h3>App-Based Waste Collection</h3>
+
+    <!-- Overview -->
+    <p class="mb-4">
+      <strong>Overview:</strong><br>
+      A smart plastic collection system designed for communities, households, corporates, and retail chains through the
+      EcogenX mobile app.
+    </p>
+
+    <!-- Community-Based Collection -->
+    <h6 class="mb-3">Community & Apartment Based Collection:</h6>
+    <div class="row gy-4 mb-5">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon-box h-100">
+          <i class="fas fa-shopping-bag text-info fa-2x mb-2"></i>
+          <h6>Dedicated Collection Bags</h6>
+          <p class="mb-0">Residents receive plastic bags for collection — no hassle of sorting themselves.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon-box h-100">
+          <i class="fas fa-calendar-week text-warning fa-2x mb-2"></i>
+          <h6>Weekly Scheduled Pickups</h6>
+          <p class="mb-0">Pickup happens weekly with optimized routes to ensure timely collection.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon-box h-100">
+          <i class="fas fa-balance-scale text-success fa-2x mb-2"></i>
+          <h6>Weighing & Rewards</h6>
+          <p class="mb-0">Plastic is weighed, and users receive reward points directly on the app.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- On-Demand Pickup -->
+    <h6 class="mb-3">On-Demand Pickup via App:</h6>
+    <div class="row gy-4 mb-5">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="d-flex align-items-start gap-3">
+          <i class="fas fa-box-open fa-2x text-primary"></i>
+          <div>
+            <h6 class="mb-1">1. Store Plastic Waste</h6>
+            <p class="mb-0">Users collect wrappers, oil bottles, chairs, and more in storage.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="d-flex align-items-start gap-3">
+          <i class="fas fa-mobile-alt fa-2x text-info"></i>
+          <div>
+            <h6 class="mb-1">2. Schedule Pickup</h6>
+            <p class="mb-0">Pickup requests can be made anytime using the EcogenX app.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="d-flex align-items-start gap-3">
+          <i class="fas fa-hand-holding-usd fa-2x text-success"></i>
+          <div>
+            <h6 class="mb-1">3. Instant Rewards</h6>
+            <p class="mb-0">Waste is recycled or converted into energy, and users are rewarded instantly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why It Works -->
+    <h6 class="mb-3">Why It Works:</h6>
+    <div class="row text-center mb-5">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box h-100">
+          <i class="fas fa-house-user text-warning fa-2x mb-2"></i>
+          <h6>Convenience</h6>
+          <p class="mb-0">Home collection removes the burden of dropping off recyclables at centers.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box h-100">
+          <i class="fas fa-network-wired text-info fa-2x mb-2"></i>
+          <h6>Scalability</h6>
+          <p class="mb-0">Perfectly expandable to corporate offices, restaurants, and retail chains.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box h-100">
+          <i class="fas fa-route text-success fa-2x mb-2"></i>
+          <h6>Efficiency</h6>
+          <p class="mb-0">AI-based routing boosts logistics, reduces cost, and increases pickup speed.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Incentives -->
+    <h6 class="mb-3">Incentives for Users:</h6>
+    <ul class="mb-4">
+      <li>Grocery discounts at D-Mart & Big Bazaar</li>
+      <li>Metro and bus fare reductions</li>
+      <li>Amazon/Flipkart shopping coupons</li>
+      <li>Paytm, PhonePe, Google Pay cashback</li>
+      <li>Discounts on movie tickets and restaurant bills</li>
+    </ul>
+  </div>
+
+
+
+
+
+  <!-- Phase 8: Circular Waste-to-Energy Conversion -->
+  <div id="solution8" class="solution-detail container pt-5" data-aos="fade-up">
+    <div class="phase-label"><i class="fas fa-recycle"></i> Phase 8</div>
+    <h3>Circular Waste-to-Energy Conversion</h3>
+
+    <!-- Recycling & Energy Conversion -->
+    <p class="mb-4">
+      <strong>Recycling & Energy Conversion:</strong><br>
+      Plastic waste is efficiently separated into recyclable and non-recyclable categories.
+      Recyclables are transformed into new products such as packaging and textile fibers,
+      while non-recyclables are converted into usable energy — ensuring nothing ends up in a landfill.
+    </p>
+
+    <div class="row gy-4 mb-5">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="d-flex align-items-start gap-3">
+          <i class="fas fa-recycle fa-2x text-success"></i>
+          <div>
+            <h6 class="mb-1">1. Waste Sorting</h6>
+            <p class="mb-0">Plastic is separated into recyclable and non-recyclable types at our facilities.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="d-flex align-items-start gap-3">
+          <i class="fas fa-cube fa-2x text-warning"></i>
+          <div>
+            <h6 class="mb-1">2. Material Recovery</h6>
+            <p class="mb-0">Recyclable plastics are processed into packaging, textiles, or manufacturing materials.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="d-flex align-items-start gap-3">
+          <i class="fas fa-bolt fa-2x text-danger"></i>
+          <div>
+            <h6 class="mb-1">3. Energy Generation</h6>
+            <p class="mb-0">Non-recyclables are converted into clean energy instead of being landfilled.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why It Works -->
+    <h6 class="mb-3">Why It Works:</h6>
+    <div class="row text-center mb-4">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box h-100">
+          <i class="fas fa-circle-notch text-info fa-2x mb-2"></i>
+          <h6>Circular Economy</h6>
+          <p class="mb-0">Every piece of plastic is reused, recycled, or repurposed — nothing goes to waste.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box h-100">
+          <i class="fas fa-solar-panel text-warning fa-2x mb-2"></i>
+          <h6>Clean Energy</h6>
+          <p class="mb-0">Provides renewable energy for off-grid communities and backup energy grids.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box h-100">
+          <i class="fas fa-fire text-danger fa-2x mb-2"></i>
+          <h6>Fossil Fuel Reduction</h6>
+          <p class="mb-0">Helps reduce reliance on non-renewable resources like coal and oil.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer>
+    <p>© 2025 EcogenX Innovations Pvt Ltd. All rights reserved. |
+      <a href="mailto:hello@ecogenx.go" class="text-decoration-none text-light">hello@ecogenx.go</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: 'ease-in-out',
+      anchorPlacement: 'top-bottom'
+    });
+  </script>
+</body>
+
+</html>

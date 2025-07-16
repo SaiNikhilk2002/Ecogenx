@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impact | EcogenX Innovations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #f0f0f0;
+    }
+
+    .navbar {
+      background-color: #010409;
+    }
+
+    .navbar a,
+    .navbar-brand {
+      color: #58a6ff !important;
+    }
+
+    .section {
+      padding: 60px 20px;
+    }
+
+    .section-dark {
+      background-color: #161b22;
+    }
+
+    .stat-box {
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 20px;
+      background-color: #21262d;
+      text-align: center;
+    }
+
+    .stat-box h3 {
+      color: #58a6ff;
+      font-size: 2rem;
+    }
+
+    .receive-card {
+      background-color: #21262d;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      color: #f0f0f0;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      transform: rotateY(90deg);
+      opacity: 0;
+    }
+
+    .receive-card h5.card-title {
+      color: #58a6ff;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .animate-flip {
+      animation: flipIn 0.8s forwards;
+    }
+
+    .animate-flip.delay-0 {
+      animation-delay: 0.1s;
+    }
+
+    .animate-flip.delay-1 {
+      animation-delay: 0.3s;
+    }
+
+    .animate-flip.delay-2 {
+      animation-delay: 0.5s;
+    }
+
+    .animate-flip.delay-3 {
+      animation-delay: 0.7s;
+    }
+
+    @keyframes flipIn {
+      0% {
+        transform: rotateY(90deg);
+        opacity: 0;
+      }
+
+      100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+      }
+    }
+
+    footer {
+      background: #010409;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/Ecogen_X_PNG_Logo.png" alt="EcogenX Logo" style="width: 220px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link active" href="impact.html">Impact</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Impact Section -->
+  <div class="section section-dark container text-center">
+    <h2>Making an Impact — One Step at a Time</h2>
+    <p class="mt-3">We're just getting started — but our mission is clear.
+      With every bag collected,every bin placed, and every conversation sparked,
+      we're building a cleaner, more responsible India.
+    </p>
+
+    <div class="row mt-5">
+      <div class="col-md-3 stat-box">
+        <h3>30+ Pilot Bins Installed</h3>
+        <p>In schools, offices, and tea stalls across Hyderabad — promoting responsible disposal.</p>
+      </div>
+      <div class="col-md-3 stat-box">
+        <h3>200+ Citizens Engaged</h3>
+        <p>Through awareness sessions, surveys, and our starter collection programs.</p>
+      </div>
+      <div class="col-md-3 stat-box">
+        <h3>5+ Partnerships Initiated</h3>
+        <p>With schools, apartments, and local vendors to test and scale our waste systems.</p>
+      </div>
+      <div class="col-md-3 stat-box">
+        <h3>120+ kg of CO₂ Emissions Avoided</h3>
+        <p>By diverting waste from landfills and promoting recycling-based recovery in pilot zones.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- What You Receive Section -->
+  <div class="section container text-center">
+    <h2>What You Receive</h2>
+    <p class="text-muted mb-5">A token of appreciation for being part of the EcogenX Movement</p>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col d-flex">
+        <div class="receive-card animate-flip delay-0 flex-fill d-flex flex-column text-center p-4">
+          <img src="images/starter-kit.png" alt="Starter Kit" class="mb-3" style="width: 60px;">
+          <h5 class="card-title">EcogenX Starter Kit</h5>
+          <p class="mt-2 mb-0">Delivered to your doorstep with biodegradable bags and simple recycling instructions to
+            get started on your journey to responsible waste management.</p>
+        </div>
+      </div>
+      <div class="col d-flex">
+        <div class="receive-card animate-flip delay-1 flex-fill d-flex flex-column text-center p-4">
+          <img src="images/certificate.png" alt="Certification" class="mb-3" style="width: 60px;">
+          <h5 class="card-title">Certification of Support</h5>
+          <p class="mt-2 mb-0">Receive formal recognition for contributing to a cleaner, greener, and waste-free India.
+          </p>
+        </div>
+      </div>
+      <div class="col d-flex">
+        <div class="receive-card animate-flip delay-2 flex-fill d-flex flex-column text-center p-4">
+          <img src="images/report.png" alt="Monthly Reports" class="mb-3" style="width: 60px;">
+          <h5 class="card-title">Monthly Impact Reports</h5>
+          <p class="mt-2 mb-0">Track how your actions reduce waste, support communities, and create real environmental
+            impact.</p>
+        </div>
+      </div>
+      <div class="col d-flex">
+        <div class="receive-card animate-flip delay-3 flex-fill d-flex flex-column text-center p-4">
+          <img src="images/community.png" alt="Greener Future" class="mb-3" style="width: 60px;">
+          <h5 class="card-title">Be Part of a Greener Future</h5>
+          <p class="mt-2 mb-0">Join citizens across India transforming cities through smart collection and sustainable
+            initiatives powered by EcogenX.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Expansion Plans -->
+  <div class="section section-dark container text-center">
+    <h2>Expansion Plans</h2>
+    <p class="mt-3">We are scaling our model across major cities in India.</p>
+    <ul class="list-unstyled mt-4">
+      <li><strong>2025:</strong> Hyderabad pilot – 100+ apartment complexes, 20 vending machines, 50 shredding bins</li>
+      <li><strong>2026-27:</strong> Expansion to Delhi, Mumbai, Bangalore, Chennai, Pune</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 EcogenX Innovations Pvt Ltd. All rights reserved. | <a href="mailto:hello@ecogenx.go"
+        class="text-decoration-none text-light">hello@ecogenx.go</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
