@@ -229,6 +229,24 @@
       width: 200px;
       margin-bottom: 20px;
     }
+
+
+    .section.bg-about {
+      background: linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 0.7)), url('./images/Photos/About/About_us.jpg') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      min-height: 400px;
+      padding: 100px 0 70px 0;
+    }
+
+    @media (max-width: 768px) {
+      .section.bg-about {
+        background-attachment: scroll;
+        /* Prevent issues on mobile */
+        min-height: 250px;
+        padding: 60px 0 30px 0;
+      }
+    }
   </style>
 </head>
 
@@ -257,17 +275,25 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="section text-center">
+  <section class="section text-center bg-about" style="
+    background: linear-gradient(rgba(13,17,23,0.7), rgba(13,17,23,0.7)), url('./images/Photos/About/About_us.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0 70px 0;
+    min-height: 400px;
+    ">
     <div class="container">
-      <img src="https://via.placeholder.com/1200x500?text=EcogenX+Mission" class="img-fluid mb-4 mb-md-5"
-        alt="Our Mission Banner">
-      <h2 class="display-5 mb-3" data-aos="fade-up">About <span class="highlight">EcogenX Innovations</span></h2>
+      <h2 class="display-5 mb-3" data-aos="fade-up">
+        About <span class="highlight">EcogenX Innovations</span>
+      </h2>
       <p class="lead mx-auto" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="100">
         We're not just a company. We're a movement leading India into a sustainable, waste-free, and tech-powered
         future.
       </p>
     </div>
   </section>
+
+
 
   <!-- Our Story -->
   <section class="section-dark section">
@@ -435,11 +461,11 @@
   </section>
 
   <!-- Leadership Team -->
-  <section class="section-dark section" data-aos="fade-up">
+  <!-- <section class="section-dark section" data-aos="fade-up">
     <div class="container">
       <h2 class="text-center mb-5">Meet Our Founders</h2>
       <div class="row g-4">
-        <!-- Founder: Kancharla Raghucharan -->
+     
         <div class="col-md-6">
           <div class="card bg-dark text-white border-0 shadow-lg team-card p-4 h-100">
             <img src="images/Photos/About/Raghu_profile.jpg" class="img-fluid rounded-circle mb-3"
@@ -454,7 +480,7 @@
             </blockquote>
           </div>
         </div>
-        <!-- Co-Founder: Kancharla Raghuvarun -->
+
         <div class="col-md-6">
           <div class="card bg-dark text-white border-0 shadow-lg team-card p-4 h-100">
             <img src="images/Photos/About/Raghuvarun_profile.jpeg" class="img-fluid rounded-circle mb-3"
@@ -470,14 +496,80 @@
           </div>
         </div>
       </div>
-      <!-- Section Footer Line (Add this below the leadership cards) -->
+    
+      <div class="text-center mt-4">
+        <p class="lead mb-0">United by purpose. Driven by action. Together, they are building the future of circular
+          waste management in India.</p>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="section-dark section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="text-center mb-2">The Minds Behind the Movement</h2>
+      <p class="text-center mb-5">Meet the passionate team building India’s next-generation waste solutions.</p>
+      <div class="row g-4">
+        <!-- Kancharla Raghucharan -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card bg-dark text-white border-0 shadow-lg team-card p-4 h-100 text-center">
+            <img src="images/Photos/About/Raghu_profile.jpg" class="img-fluid rounded-circle mb-3"
+              alt="Kancharla Raghucharan" style="max-width: 120px;">
+            <h5 class="mt-2 mb-1">Kancharla Raghucharan</h5>
+            <p class="mb-1">Founder, EcogenX Innovations</p>
+            <small class="text-light d-block mb-2">MSc – Sustainability Management, NEOMA Business School</small>
+            <blockquote class="mb-0">
+              <em>“What began as a student idea is now a growing mission to make India cleaner, greener, and more aware.
+                I’m here to turn vision into action.”</em>
+            </blockquote>
+          </div>
+        </div>
+        <!-- Kancharla Raghuvarun -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card bg-dark text-white border-0 shadow-lg team-card p-4 h-100 text-center">
+            <img src="images/Photos/About/Raghuvarun_profile.jpeg" class="img-fluid rounded-circle mb-3"
+              alt="Kancharla Raghuvarun" style="max-width: 120px;">
+            <h5 class="mt-2 mb-1">Kancharla Raghuvarun</h5>
+            <p class="mb-1">Co-founder, EcogenX Innovations</p>
+            <small class="text-light d-block mb-2">Business Analyst – DePaul University</small>
+            <blockquote class="mb-0">
+              <em>“From analytics to strategy, I help drive operational efficiency and scale the systems that power our
+                impact.”</em>
+            </blockquote>
+          </div>
+        </div>
+        <!-- Akhil Vangari -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card bg-dark text-white border-0 shadow-lg team-card p-4 h-100 text-center">
+            <img src="images/Photos/About/Akhil_profile.jpg" class="img-fluid rounded-circle mb-3" alt="Akhil Vangari"
+              style="max-width: 120px;">
+            <h5 class="mt-2 mb-1">Akhil Vangari</h5>
+            <p class="mb-1">Project Manager – BVRIT</p>
+            <blockquote class="mb-0">
+              <em>“From planning to execution, I ensure our pilots and programs stay on track and create real on-ground
+                results.”</em>
+            </blockquote>
+          </div>
+        </div>
+        <!-- Charan Veera Reddy -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card bg-dark text-white border-0 shadow-lg team-card p-4 h-100 text-center">
+            <img src="images/Photos/About/Charan_profile.jpg" class="img-fluid rounded-circle mb-3"
+              alt="Charan Veera Reddy" style="max-width: 120px;">
+            <h5 class="mt-2 mb-1">Charan Veera Reddy</h5>
+            <p class="mb-1">Chief Operating Officer (COO) – NEOMA Business School</p>
+            <blockquote class="mb-0">
+              <em>“I align our teams, partnerships, and daily operations — making sure every effort moves us closer to a
+                sustainable future.”</em>
+            </blockquote>
+          </div>
+        </div>
+      </div>
       <div class="text-center mt-4">
         <p class="lead mb-0">United by purpose. Driven by action. Together, they are building the future of circular
           waste management in India.</p>
       </div>
     </div>
   </section>
-
 
 
 
